@@ -1,0 +1,27 @@
+{
+  "name": "ambyint-test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-frontend": "serve -l 3000 TodoListApp",
+    "e2e-tests-all": "npx playwright test",
+    "generate-reporter": "npx playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktorRazumovskyi/Ambyint-test-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViktorRazumovskyi/Ambyint-test-task/issues"
+  },
+  "homepage": "https://github.com/ViktorRazumovskyi/Ambyint-test-task#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.32.3",
+    "serve": "^14.2.0",
+    "typescript": "^5.0.4"
+  }
+}

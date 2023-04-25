@@ -7,13 +7,17 @@ let editId,
 isEditTask = false,
 todos = JSON.parse(localStorage.getItem("todo-list"));
 
-filters.forEach(btn => {
+filters.forEach((btn) => {
     btn.addEventListener("click", () => {
         document.querySelector("span.active").classList.remove("active");
         btn.classList.add("active");
         showTodo(btn.id);
     });
 });
+
+taskInput.setAttribute('data-testId', 'task-input');
+clearAll.setAttribute('data-testId', 'clear-all-btn');
+taskBox.setAttribute('data-testId', 'task-box');
 
 function showTodo(filter) {
     let liTag = "";
@@ -24,7 +28,7 @@ function showTodo(filter) {
                 liTag += `<li class="task">
                             <label for="${id}">
                                 <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${completed}>
-                                <p class="${completed}">${todo.name}</p>
+                                <p class="${completed}" data-testId="task-text">${todo.name}</p>
                             </label>
                             <div class="settings">
                                 <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
